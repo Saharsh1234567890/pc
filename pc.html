@@ -1,0 +1,46 @@
+<!DOCTYPE>
+ <html>
+  <body>
+
+   <h1>Palindrome Checker</h1>
+
+   <p id="sd">Your answer will be printed here!!</p>
+
+   <input type="text" id="pc" name="box">
+
+   <button style="button" onclick="palindromechecker()">Try it!</button>
+
+   <head>
+   <script>
+
+   function palindromechecker(){
+
+   var doc  = document.getElementById("pc").value;
+   var doc2 = doc.split("");
+   var doc3 = doc2.reverse();
+   var doc4 = doc3.toString();
+   var doc5 = doc4.replaceAll(",","")
+   document.getElementById("sd").innerHTML = doc5;
+
+   if(doc.localeCompare(doc5) == 0) {
+
+   alert("This is a palindrome");
+
+   }
+
+   else {
+
+   alert("This is not palindrome");
+
+   }
+   
+  
+   }
+
+   </script>
+   </head>
+
+
+
+  </body>
+  </html>
