@@ -15,11 +15,12 @@
 
    function palindromechecker(){
 
-   var doc  = document.getElementById("pc").value;
-   var doc2 = doc.split("");
-   var doc3 = doc2.reverse();
-   var doc4 = doc3.toString();
-   var doc5 = doc4.replaceAll(",","")
+   var doc  = document.getElementById("pc").value;//Apple
+   doc = doc.toLowerCase();//apple
+   var doc2 = doc.split("");//[a,p,p,l,e]
+   var doc3 = doc2.reverse();//[e,l,p,p,a]
+   var doc4 = doc3.toString();//e,l,p,p,a to string
+   var doc5 = doc4.replaceAll(",","")//elppa
    document.getElementById("sd").innerHTML = doc5;
 
    if(doc.localeCompare(doc5) == 0) {
